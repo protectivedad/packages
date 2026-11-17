@@ -87,9 +87,6 @@ ifeq ($(ARCH),riscv64)
   MAKE_FLAGS += CFLAGS_EXTRA=-Wno-error=clobbered
 endif
 
-TARGET_CFLAGS += \
-	-DMBEDTLS_CONFIG_FILE=\\\"mbedtls/build_info.h\\\"
-
 # FIXME: remove this asap; this fixes some build issues with mbedtls from OpenWrt
 TARGET_CFLAGS += \
 	-Wno-error=implicit-function-declaration
